@@ -44,7 +44,7 @@ interface IUser {
   name: string,
   items: IUser[] | null
 }
-const a: IUser = {
+const azaza: IUser = {
 id: 123,
 name: 'Eric',
 items: [
