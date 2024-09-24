@@ -18,7 +18,7 @@ const actionMap3: Array<string> = [
 
 // TODO Interface
 // Описание фунцкии в интерфейсе
-interface IFunc {
+interface Func {
   (id: number, isActive: boolean, callback: Function): Array<Array<string | number>>
 }
  // типизация функции
@@ -29,7 +29,7 @@ return [
 }
 
 // типизация идентичной функции только через интерфейс
-const func2: IFunc = (id, isActive, callback) => {
+const func2: Func = (id, isActive, callback) => {
   return [
   [ 'name', 123 ]
 ]
@@ -39,12 +39,12 @@ func(1, true, () => {});
 
 // TODO Interface
 
-interface IUser {
+interface User {
   id: number,
   name: string,
-  items: IUser[] | null
+  items: User[] | null
 }
-const azaza: IUser = {
+const azaza: User = {
 id: 123,
 name: 'Eric',
 items: [
@@ -62,10 +62,10 @@ items: [
 };
 
 // Ключ может оказаться любым. Нужно создать интерфейс, описывающий объект n (типизировать ключи и значения)
-interface IFuncMap {
+interface FuncMap {
   [key: string | number | symbol]: (arg: number) => string 
 }
-const n: IFuncMap = {
+const n: FuncMap = {
 smth: function(number) {
   return 'test';
 },
